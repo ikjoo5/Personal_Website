@@ -47,7 +47,7 @@ class SiteSmokeTest(unittest.TestCase):
             self.assertEqual(response.status, 200)
             document = Document()
             document.feed(response.read().decode())
-        self.assertTrue({'home', 'about', 'projects', 'research', 'background', 'cv', 'contact'} <= document.ids)
+        self.assertTrue({'main', 'about', 'publications', 'projects'} <= document.ids)
         for anchor in document.anchors:
             with self.subTest(anchor=anchor):
                 self.assertIn(anchor, document.ids)
