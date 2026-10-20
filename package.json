@@ -1,0 +1,16 @@
+{
+  "name": "ikjoo-oh-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ikjoo Oh's academic portfolio — a dependency-free static site",
+  "scripts": {
+    "dev": "python3 -m http.server 8000 --bind 0.0.0.0",
+    "check": "node --check app.js && node --check site-data.js",
+    "test": "python3 tests/smoke.py",
+    "test:browser": "node tests/browser.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "playwright": "1.64.1"
+  }
+}
